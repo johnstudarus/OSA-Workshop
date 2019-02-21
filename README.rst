@@ -1,7 +1,7 @@
-packet-ci-cloud
+OSA Workshop
 ===============
 
-CI/CD Deployment of Packet Nodepool Cloud
+Deployment of an OpenStack Ansible Cloud atop Packet
 
 ## Prerequisites
 

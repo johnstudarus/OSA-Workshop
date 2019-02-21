@@ -12,7 +12,7 @@ resource "packet_device" "compute" {
     private_key = "${file("${var.cloud_ssh_key_path}")}"
   }
   user_data     = "#cloud-config\n\nssh_authorized_keys:\n  - \"${file("${var.cloud_ssh_public_key_path}")}\""
-  facility      = "${var.packet_facility}"
+  facilities    = ["${var.packet_facility}"]
   project_id    = "${var.packet_project_id}"
   billing_cycle = "hourly"
 
@@ -54,7 +54,7 @@ resource "packet_device" "control" {
     private_key = "${file("${var.cloud_ssh_key_path}")}"
   }
   user_data     = "#cloud-config\n\nssh_authorized_keys:\n  - \"${file("${var.cloud_ssh_public_key_path}")}\""
-  facility      = "${var.packet_facility}"
+  facilities    = ["${var.packet_facility}"]
   project_id    = "${var.packet_project_id}"
   billing_cycle = "hourly"
 

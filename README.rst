@@ -8,7 +8,6 @@ OSA itself is installed on one of the bare metal hosts. The provisioning of the
 infrastructure is via Terraform. This build process also writes a skeleton OSA configuration file.
 
 
-
 ## Prerequisites
 
 ### Packet Project ID & API Key
@@ -47,7 +46,7 @@ cd terraform
 ```
 
 Update with the keys to access the physical hosts. Terraform will configure the root user on the new hosts with this key
-```
+```bash
 cp  ~/.ssh/id_rsa.pub .
 ```
 
@@ -71,5 +70,7 @@ cp terraform/openstack_user_config.yml .
 vi openstack_user_config.yml
 ```
 
-### Run the Ansible Playbook
+### Run the Ansible Playbook on Controller
+
+SSH to the Controller and run OSA from that host
 

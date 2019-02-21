@@ -1,7 +1,13 @@
 OSA Workshop
-===============
+============
 
 Deployment of an OpenStack Ansible Cloud atop Packet
+
+This repo walks through setting up the bare metal infrastructure for OSA to build a cloud.
+OSA itself is installed on one of the bare metal hosts. The provisioning of the
+infrastructure is via Terraform. This build process also writes a skeleton OSA configuration file.
+
+
 
 ## Prerequisites
 

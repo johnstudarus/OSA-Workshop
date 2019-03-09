@@ -1,4 +1,9 @@
 data "packet_precreated_ip_block" "private_block" {
+    depends_on = [
+      "packet_device.control",
+      "packet_device.compute",
+    ]
+
     facility         = "${var.packet_facility}"
     project_id       = "${var.packet_project_id}"
     address_family   = 4
